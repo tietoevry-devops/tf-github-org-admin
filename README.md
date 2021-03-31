@@ -10,7 +10,7 @@ Shell examples are for `bash`.
 Copy files from bootstrap directory into your repository
 
 ```.shell
-
+curl -L https://github.com/tietoevry-devops/tf-github-org-admin/tarball/main | tar -xzv --include '*bootstrap*' --strip-components 2
 ```
 
 ## Edit
