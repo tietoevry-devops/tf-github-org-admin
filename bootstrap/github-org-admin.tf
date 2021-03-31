@@ -1,6 +1,5 @@
 module "github-org-admin" {
-  source                             = "github.com/tietoevry-devops/admin-github?ref=v0.1"
-  github_token                       = var.github_token
+  source                             = "github.com/tietoevry-devops/tf-github-org-admin?ref=v0.1"
   github_organization                = var.github_organization
   default_repo_settings              = var.default_repo_settings
   default_branch_protection_settings = var.default_branch_protection_settings
