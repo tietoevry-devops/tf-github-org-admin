@@ -42,5 +42,51 @@ terraform apply
 
 ## Documentation
 <!--- BEGIN_TF_DOCS --->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| terraform | >= 0.14.4 |
+| github | >= 4.6.0 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| github | >= 4.6.0 |
+
+## Modules
+
+No Modules.
+
+## Resources
+
+| Name |
+|------|
+| [github_branch_protection](https://registry.terraform.io/providers/hashicorp/github/latest/docs/resources/branch_protection) |
+| [github_membership](https://registry.terraform.io/providers/hashicorp/github/latest/docs/resources/membership) |
+| [github_repository](https://registry.terraform.io/providers/hashicorp/github/latest/docs/resources/repository) |
+| [github_repository_collaborator](https://registry.terraform.io/providers/hashicorp/github/latest/docs/resources/repository_collaborator) |
+| [github_team](https://registry.terraform.io/providers/hashicorp/github/latest/docs/resources/team) |
+| [github_team_membership](https://registry.terraform.io/providers/hashicorp/github/latest/docs/resources/team_membership) |
+| [github_team_repository](https://registry.terraform.io/providers/hashicorp/github/latest/docs/resources/team_repository) |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| branch\_protections | map of branch protection. any teams with dismissals or push restrictions needs to be explicitly defined with access as well | `map(map(any))` | `{}` | no |
+| collaborators | map of external collaborators with list of repositories | `map(list(string))` | `{}` | no |
+| default\_branch\_protection\_settings | map of default branch protection. any teams with dismissals or push restrictions needs to be explicitly defined with access as well | `map` | `{}` | no |
+| default\_repo\_settings | default repository settings | `map` | `{}` | no |
+| github\_organization | n/a | `any` | n/a | yes |
+| owner\_team | name of team of owners, the team will be handled especially | `string` | `"owners"` | no |
+| repositories | n/a | `map(any)` | `{}` | no |
+| users | map of user names with list of teams | `map(list(string))` | `{}` | no |
+
+## Outputs
+
+No output.
+
 <!--- END_TF_DOCS --->
 
