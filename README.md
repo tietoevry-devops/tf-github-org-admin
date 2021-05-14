@@ -39,3 +39,8 @@ If you are OK with the proposed changes, run
 ```.shell
 terraform apply
 ```
+
+## Documentation
+<!--- BEGIN_TF_DOCS --->
+<!--- END_TF_DOCS --->
+
