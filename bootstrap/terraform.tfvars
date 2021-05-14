@@ -27,6 +27,11 @@ repositories = {
   #}
 }
 
+# collaborators are added with push access
+collaborators = {
+  #"extuser1" = ["repo1","repo2"]
+}
+
 # For repos where you want to be open, but restrict on single repository
 # This will by default add owners from .github/CODEOWNERS file as required reviewers
 # Default branch is "main"
