@@ -40,7 +40,7 @@ If you are OK with the proposed changes, run
 terraform apply
 ```
 
-## Documentation
+# Documentation
 <!--- BEGIN_TF_DOCS --->
 ## Requirements
 
