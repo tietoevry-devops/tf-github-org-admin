@@ -69,7 +69,7 @@ locals {
 
 resource "github_branch_protection" "branch-protections" {
   for_each               = { for repo, defs in var.branch_protections : repo => merge(local.defaults_branch_protection, defs) }
-  repository_id          = github_repository.repos[each.key].node_id
+  repository_id          = github_repository.repos[each.key].name
   pattern                = each.value.pattern
   enforce_admins         = each.value.enforce_admins
   push_restrictions      = [for name in each.value.push_restrictions : github_team.teams[name].node_id]
