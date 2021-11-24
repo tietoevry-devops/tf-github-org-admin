@@ -46,14 +46,14 @@ terraform apply
 
 | Name | Version |
 |------|---------|
-| terraform | >= 0.14.4 |
-| github | >= 4.6.0 |
+| terraform | >= 1.0.4 |
+| github | >= 4.18.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| github | >= 4.6.0 |
+| github | >= 4.18.0 |
 
 ## Modules
 
@@ -63,13 +63,13 @@ No Modules.
 
 | Name |
 |------|
-| [github_branch_protection](https://registry.terraform.io/providers/hashicorp/github/latest/docs/resources/branch_protection) |
-| [github_membership](https://registry.terraform.io/providers/hashicorp/github/latest/docs/resources/membership) |
-| [github_repository](https://registry.terraform.io/providers/hashicorp/github/latest/docs/resources/repository) |
-| [github_repository_collaborator](https://registry.terraform.io/providers/hashicorp/github/latest/docs/resources/repository_collaborator) |
-| [github_team](https://registry.terraform.io/providers/hashicorp/github/latest/docs/resources/team) |
-| [github_team_membership](https://registry.terraform.io/providers/hashicorp/github/latest/docs/resources/team_membership) |
-| [github_team_repository](https://registry.terraform.io/providers/hashicorp/github/latest/docs/resources/team_repository) |
+| [github_branch_protection](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_protection) |
+| [github_membership](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/membership) |
+| [github_repository](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) |
+| [github_repository_collaborator](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_collaborator) |
+| [github_team](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team) |
+| [github_team_membership](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_membership) |
+| [github_team_repository](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_repository) |
 
 ## Inputs
 
