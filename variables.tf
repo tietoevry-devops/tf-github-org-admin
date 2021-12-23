@@ -17,7 +17,7 @@ variable "default_branch_protection_settings" {
 }
 
 variable "repositories" {
-  type    = map(any)
+  type    = any
   default = {}
 }
 
