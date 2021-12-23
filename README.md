@@ -81,7 +81,7 @@ No Modules.
 | default\_repo\_settings | default repository settings | `map` | `{}` | no |
 | github\_organization | n/a | `any` | n/a | yes |
 | owner\_team | name of team of owners, the team will be handled especially | `string` | `"owners"` | no |
-| repositories | n/a | `map(any)` | `{}` | no |
+| repositories | n/a | `any` | `{}` | no |
 | users | map of user names with list of teams | `map(list(string))` | `{}` | no |
 
 ## Outputs

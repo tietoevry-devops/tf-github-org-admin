@@ -17,8 +17,30 @@ variable "default_branch_protection_settings" {
 }
 
 variable "repositories" {
-  type    = map(any)
-  default = {}
+  type = any
+  default = {
+    #"demo" = {
+    #  description            = "Demo repository"
+    #  homepage_url           = null
+    #  visibility             = "internal"
+    #  has_issues             = false
+    #  has_projects           = false
+    #  has_wiki               = false
+    #  is_template            = false
+    #  allow_merge_commit     = false
+    #  allow_squash_merge     = true
+    #  allow_rebase_merge     = false
+    #  delete_branch_on_merge = true
+    #  has_downloads          = false
+    #  auto_init              = true
+    #  gitignore_template     = null
+    #  archive_on_destroy     = false
+    #  vulnerability_alerts   = false
+    #  topics                 = null
+    #  template               = {}
+    #  pushteams              = []
+    #}
+  }
 }
 
 variable "branch_protections" {

@@ -19,6 +19,7 @@ locals {
     topics                 = lookup(var.default_repo_settings, "topics", null)
     template               = lookup(var.default_repo_settings, "template", {})
     pushteams              = lookup(var.default_repo_settings, "pushteams", [])
+    adminteams             = lookup(var.default_repo_settings, "adminteams", [])
   }
 }
 
@@ -90,20 +91,30 @@ resource "github_branch_protection" "branch-protections" {
 }
 
 locals {
-  repopushers = flatten([
+  repoaccess = flatten(concat([
     for name, defs in var.repositories : [
-      for team in merge(local.defaults_repository, defs).pushteams : {
-        name = name
-        team = team
+      for team in merge(local.defaults_repository, defs).adminteams : {
+        name       = name
+        team       = team
+        permission = "admin"
       }
     ]
-  ])
+    ],
+    [
+      for name, defs in var.repositories : [
+        for team in merge(local.defaults_repository, defs).pushteams : {
+          name       = name
+          team       = team
+          permission = "push"
+        } if !contains(merge(local.defaults_repository, defs).adminteams, name) #cannot be both admin and push
+      ]
+  ]))
 }
 
-resource "github_team_repository" "team_push_repo" {
-  for_each   = { for tuple in local.repopushers : "${tuple.name}_${tuple.team}" => tuple }
+resource "github_team_repository" "team_access_repo" {
+  for_each   = { for access in local.repoaccess : "${access.name}_${access.team}" => access }
   team_id    = github_team.teams[each.value.team].id
   repository = github_repository.repos[each.value.name].name
-  permission = "push"
+  permission = each.value.permission
 }
 
