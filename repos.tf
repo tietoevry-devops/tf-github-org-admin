@@ -93,7 +93,7 @@ resource "github_branch_protection" "branch-protections" {
 locals {
   repoaccess = flatten(concat([
     for name, defs in var.repositories : [
-      for team in merge(local.defaults_repository, defs).admins : {
+      for team in merge(local.defaults_repository, defs).adminteams : {
         name       = name
         team       = team
         permission = "admin"
@@ -106,7 +106,7 @@ locals {
           name       = name
           team       = team
           permission = "push"
-        } if !contains(merge(local.defaults_repository, defs).admins, name) #cannot be in both admins and push
+        } if !contains(merge(local.defaults_repository, defs).adminteams, name) #cannot be both admin and push
       ]
   ]))
 }
