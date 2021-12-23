@@ -17,8 +17,8 @@ variable "default_branch_protection_settings" {
 }
 
 variable "repositories" {
-  type    = any
-  default = {}
+  type = any
+  #default = {}
 }
 
 variable "branch_protections" {
