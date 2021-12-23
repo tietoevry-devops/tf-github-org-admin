@@ -81,7 +81,7 @@ No Modules.
 | default\_repo\_settings | default repository settings | `map` | `{}` | no |
 | github\_organization | n/a | `any` | n/a | yes |
 | owner\_team | name of team of owners, the team will be handled especially | `string` | `"owners"` | no |
-| repositories | n/a | `any` | <pre>{<br>  "demo": {<br>    "allow_merge_commit": false,<br>    "allow_rebase_merge": false,<br>    "allow_squash_merge": true,<br>    "archive_on_destroy": false,<br>    "auto_init": true,<br>    "delete_branch_on_merge": true,<br>    "description": "Demo repository",<br>    "gitignore_template": null,<br>    "has_downloads": false,<br>    "has_issues": false,<br>    "has_projects": false,<br>    "has_wiki": false,<br>    "homepage_url": null,<br>    "is_template": false,<br>    "pushteams": [],<br>    "template": {},<br>    "topics": null,<br>    "visibility": "internal",<br>    "vulnerability_alerts": false<br>  }<br>}</pre> | no |
+| repositories | n/a | `any` | `{}` | no |
 | users | map of user names with list of teams | `map(list(string))` | `{}` | no |
 
 ## Outputs
